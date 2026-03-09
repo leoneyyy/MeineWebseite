@@ -13,6 +13,8 @@ import { CometCard } from "./components/ui/comet-card";
 import { LampContainer } from "./components/ui/lamp";
 import { TypewriterEffectSmooth } from "./components/ui/typewritter-effect";
 import eventmateImage from "./eventmate.png";
+import Navbar from "./components/navbar";
+import Footer from "./components/ui/footer";
 
 
 function App() {
@@ -21,7 +23,7 @@ function App() {
 
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden">
-
+      <Navbar />
 
       <div className="fixed inset-0 -z-10">
         <ShaderGradientCanvas>
@@ -80,7 +82,7 @@ function App() {
         </section>
 
         {/* Sektion 2: Info */}
-        <section className="bg-white/80 backdrop-blur-lg min-h-[50vh] p-8 md:p-16 text-black font-serif flex flex-col md:flex-row items-center justify-between">
+        <section id="uber-mich" className="bg-white/80 backdrop-blur-lg min-h-[50vh] p-8 md:p-16 text-black font-serif flex flex-col md:flex-row items-center justify-between">
           <h2 className="text-4xl md:text-6xl font-medium leading-tight">
             <EncryptedText text="Ich bin " className="inline-block" revealDelayMs={125} /> <br />
             <EncryptedText text="Leon Schlender" className="inline-block" revealDelayMs={150} revealedClassName="text-pink-700" /> <br />
@@ -114,7 +116,7 @@ function App() {
           </div>
         </section>
 
-        <section className="p-8 md:p-20">
+        <section id="projekte" className="p-8 md:p-20">
 
           <TypewriterEffectSmooth
             words={[
@@ -175,7 +177,9 @@ function App() {
 
           </div>
         </section>
-
+        <div id="kontakt">
+          <Footer />
+        </div>
       </main>
     </div>
   );
