@@ -2,7 +2,6 @@
 // Tilts toward the pointer, can be dragged, and a click/tap fires confetti.
 const host = document.getElementById('eventmate3d');
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const THREE_VER = '0.170.0';
 
 if (host) {
   const io = new IntersectionObserver((entries) => {
@@ -19,7 +18,8 @@ async function boot() {
     import('three/addons/loaders/FontLoader.js'),
     import('three/addons/geometries/TextGeometry.js'),
   ]);
-  const font = await new FontLoader().loadAsync(`https://cdn.jsdelivr.net/npm/three@${THREE_VER}/examples/fonts/helvetiker_bold.typeface.json`);
+  // Clash Display Semibold (ITF Free Font License), reduced to the glyphs of "Eventmate" — the site's display face
+  const font = await new FontLoader().loadAsync(new URL('assets/eventmate-font.json?v=2', document.baseURI).href);
 
   const canvas = document.createElement('canvas');
   canvas.setAttribute('role', 'img');
@@ -118,8 +118,8 @@ async function boot() {
 
   /* ---------- Wordmark ---------- */
   const textGeo = new TextGeometry('Eventmate', {
-    font, size: 0.95, depth: 0.32, curveSegments: 10,
-    bevelEnabled: true, bevelThickness: 0.05, bevelSize: 0.03, bevelSegments: 4,
+    font, size: 1.12, depth: 0.32, curveSegments: 14,
+    bevelEnabled: true, bevelThickness: 0.04, bevelSize: 0.02, bevelSegments: 4,
   });
   textGeo.computeBoundingBox();
   const text = new THREE.Mesh(textGeo, white);
