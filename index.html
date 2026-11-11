@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Leon Schlender – Portfolio</title>
-  <meta name="description" content="Portfolio von Leon Schlender, Medieninformatik-Student: 3D-Simulationen, Android-Apps und Web.">
+  <meta name="description" content="Portfolio von Leon Schlender, Medieninformatik-Student, mit Projekten aus Studium und Freizeit.">
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=satoshi@300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script type="importmap">
     { "imports": {
         "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
@@ -44,18 +44,17 @@
       <div class="hero-copy">
         <p class="mono eyebrow">Leon Schlender / Medieninformatik</p>
         <h1 id="hero-title" class="display">
-          <span class="w"><span>Ideen,</span></span>
-          <span class="w"><span>gegossen</span></span>
-          <span class="w"><span>in</span></span>
-          <span class="w"><span><em>Code.</em></span></span>
+          <span class="w"><span>Hi,</span></span>
+          <span class="w"><span>ich</span></span>
+          <span class="w"><span>bin</span></span>
+          <span class="w"><span><em>Leon.</em></span></span>
         </h1>
-        <p class="hero-sub fade-late">Ich bin Leon, Medieninformatik-Student. Ich baue Software von 3D-Simulationen in JavaFX über Android-Apps bis zu Websites wie dieser.</p>
+        <p class="hero-sub fade-late">Ich studiere Medieninformatik und programmiere gern. Hier findest du ein paar Projekte aus dem Studium und aus meiner Freizeit.</p>
         <div class="hero-actions fade-late">
           <a class="btn btn-solid" href="#projekte">Projekte ansehen</a>
           <a class="btn btn-ghost" href="#kontakt">Kontakt aufnehmen</a>
         </div>
       </div>
-      <p class="mono hero-hint" aria-hidden="true"><span>Komm näher – das Metall folgt</span><i></i></p>
     </section>
 
     <!-- PROJECTS -->
@@ -63,7 +62,7 @@
       <div class="wrap">
         <header class="section-head reveal">
           <p class="mono eyebrow">01 / Projekte</p>
-          <h2 id="work-title" class="h2">Woran ich <em>gebaut</em> habe.</h2>
+          <h2 id="work-title" class="h2">Meine <em>Projekte.</em></h2>
         </header>
         <div class="work-grid">
           <article class="card work work-solar reveal">
@@ -79,7 +78,7 @@
             </div>
             <p class="mono tag">JavaFX · 3D · Physik</p>
             <h3 class="card-title">Solar System 3D</h3>
-            <p class="muted">Ein interaktives 3D-Sonnensystem in JavaFX: Planeten auf ihren Bahnen, regelbare Simulationsgeschwindigkeit und Zoom auf einzelne Himmelskörper. Probier das Modell oben direkt aus.</p>
+            <p class="muted">Ein Sonnensystem in 3D, gebaut mit JavaFX. Die Planeten kreisen um die Sonne, und man kann die Geschwindigkeit ändern und heranzoomen. Das Modell oben kannst du selbst drehen.</p>
             <a class="mono card-more" href="https://github.com/leoneyyy/Sonnensystem" target="_blank" rel="noopener">Auf GitHub ansehen →</a>
           </article>
           <article class="card work work-3d reveal">
@@ -92,15 +91,14 @@
             </div>
             <p class="mono tag">Java · Android</p>
             <h3 class="card-title">Eventmate</h3>
-            <p class="muted">Eine Android-App rund um Events: entdecken, planen und gemeinsam mit Freunden hingehen.</p>
+            <p class="muted">Eine Android-App rund um Events, geschrieben in Java.</p>
             <p class="mono card-more muted">Repository privat</p>
           </article>
-          <article class="card work soon reveal">
-            <div class="thumb thumb-soon" aria-hidden="true"><span class="mono">Coming soon</span></div>
-            <p class="mono tag">JavaFX · REST-API · SQL · Jackson</p>
-            <h3 class="card-title">MovieDB</h3>
-            <p class="muted">Eine Filmdatenbank mit JavaFX-Oberfläche, die Daten über eine REST-API lädt und in SQL speichert.</p>
-            <p class="mono card-more muted">In Arbeit</p>
+          <article class="card work reveal">
+            <div class="thumb thumb-game"><img src="assets/late-checkout.webp" alt="Hauptmenü von Late Checkout: ein dunkles, altmodisches Hotelzimmer mit Bett, Röhrenfernseher und Nachttischlampe" loading="lazy" width="1917" height="871"></div>
+            <p class="mono tag">Unity · Spiel</p>
+            <h3 class="card-title">Late Checkout</h3>
+            <p class="muted">Ein Horrorspiel in Unity, das in einem alten, schummrigen Hotelzimmer spielt.</p>
           </article>
         </div>
       </div>
@@ -109,19 +107,19 @@
     <!-- ABOUT -->
     <section class="section" id="ueber" aria-labelledby="about-title">
       <div class="wrap split">
-        <figure class="portrait reveal">
-          <img src="assets/leon.jpg" alt="Porträt von Leon Schlender" loading="lazy" width="900" height="1098">
+        <figure class="portrait reveal" id="portrait3d" data-depth="assets/leon-portrait-depth.jpg">
+          <img src="assets/leon-portrait.jpg" alt="Porträt von Leon Schlender mit schwarzer Cap und Teddyjacke vor einer Backsteinwand" loading="lazy" width="900" height="1601">
         </figure>
         <div>
           <header class="reveal">
             <p class="mono eyebrow">02 / Über mich</p>
             <h2 id="about-title" class="h2">Ich bin <em>Leon Schlender.</em></h2>
           </header>
-          <p class="lead reveal">Ich studiere Medieninformatik und mag es, wenn Technik und Gestaltung zusammenkommen: von Physik-Simulationen und Computergrafik bis zu Interfaces, die sich gut anfühlen.</p>
-          <p class="mono eyebrow reveal">Womit ich arbeite</p>
+          <p class="lead reveal">Ich studiere Medieninformatik. Am meisten Spaß machen mir Projekte, bei denen man am Ende etwas sieht, zum Beispiel 3D-Grafik oder Apps. Vieles bringe ich mir dabei noch selbst bei.</p>
+          <p class="mono eyebrow reveal">Womit ich bisher gearbeitet habe</p>
           <ul class="skills reveal" aria-label="Technologien">
             <li>Java</li><li>JavaFX</li><li>Android</li><li>React</li><li>Tailwind CSS</li>
-            <li>WebGL / GLSL</li><li>SQL</li><li>REST-APIs</li><li>Git</li>
+            <li>SQL</li><li>Git</li><li>Blender</li><li>Unity</li>
           </ul>
         </div>
       </div>
@@ -132,13 +130,13 @@
       <div class="wrap">
         <header class="section-head reveal">
           <p class="mono eyebrow">03 / Arbeitsweise</p>
-          <h2 id="process-title" class="h2">Vom Einfall zum <em>Glanz.</em></h2>
+          <h2 id="process-title" class="h2">So gehe ich an <em>Projekte</em> ran.</h2>
         </header>
         <ol class="steps">
-          <li class="step reveal"><span class="numeral" aria-hidden="true">I</span><div><h3>Verstehen</h3><p class="muted">Erst klären, was das Projekt leisten soll und für wen es gebaut wird.</p></div></li>
-          <li class="step reveal"><span class="numeral" aria-hidden="true">II</span><div><h3>Entwerfen</h3><p class="muted">Struktur, Datenmodell und Oberfläche skizzieren, bevor die erste Zeile Code entsteht.</p></div></li>
-          <li class="step reveal"><span class="numeral" aria-hidden="true">III</span><div><h3>Bauen</h3><p class="muted">Sauberer, nachvollziehbarer Code mit Git, in kleinen Schritten getestet.</p></div></li>
-          <li class="step reveal"><span class="numeral" aria-hidden="true">IV</span><div><h3>Polieren</h3><p class="muted">Details, Animationen und Performance, bis es sich richtig anfühlt.</p></div></li>
+          <li class="step reveal"><span class="numeral" aria-hidden="true">I</span><div><h3>Überlegen</h3><p class="muted">Erst klären, was das Projekt eigentlich können soll.</p></div></li>
+          <li class="step reveal"><span class="numeral" aria-hidden="true">II</span><div><h3>Ausprobieren</h3><p class="muted">Kleine Versuche bauen und schauen, was funktioniert.</p></div></li>
+          <li class="step reveal"><span class="numeral" aria-hidden="true">III</span><div><h3>Umsetzen</h3><p class="muted">Schritt für Schritt programmieren und mit Git sichern.</p></div></li>
+          <li class="step reveal"><span class="numeral" aria-hidden="true">IV</span><div><h3>Dazulernen</h3><p class="muted">Fehler suchen, nachlesen und es beim nächsten Mal besser machen.</p></div></li>
         </ol>
       </div>
     </section>
@@ -147,8 +145,8 @@
     <section class="section cta" id="kontakt" aria-labelledby="cta-title">
       <div class="wrap">
         <p class="mono eyebrow reveal">04 / Kontakt</p>
-        <h2 id="cta-title" class="display cta-title reveal">Lust auf ein <em>gemeinsames</em> Projekt?</h2>
-        <p class="muted reveal">Ich bin immer offen für spannende Anfragen.</p>
+        <h2 id="cta-title" class="display cta-title reveal">Schreib mir <em>gern.</em></h2>
+        <p class="muted reveal">Ob Projekt, Praktikum oder einfach eine Frage: Ich freue mich über jede Nachricht.</p>
         <a class="mail reveal" href="mailto:leonschlender@gmx.de">leonschlender@gmx.de</a>
         <div class="socials reveal">
           <a class="btn btn-ghost" href="https://github.com/leoneyyy" target="_blank" rel="noopener">GitHub</a>
@@ -169,5 +167,6 @@
   <script src="main.js?v=3"></script>
   <script type="module" src="solar.js?v=3"></script>
   <script type="module" src="eventmate.js?v=5"></script>
+  <script src="portrait.js?v=1" defer></script>
 </body>
 </html>

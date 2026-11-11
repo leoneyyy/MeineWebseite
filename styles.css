@@ -136,7 +136,7 @@ a.card-more:hover{text-decoration:underline}
 .portrait{margin:0;position:relative;border-radius:28px;overflow:hidden;max-width:440px;margin-inline:auto;
   padding:3px;background:linear-gradient(135deg,#fff,#8e929c 22%,#f4f1ea 45%,#3b3e46 60%,#e6d3a8 80%,#6c6f78)}
 .portrait::before{content:"";position:absolute;inset:-30%;z-index:-1;background:radial-gradient(closest-side,rgba(230,211,168,.25),transparent)}
-.portrait img{width:100%;height:auto;border-radius:25px;filter:grayscale(.35) contrast(1.05)}
+.portrait img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 42%;border-radius:25px;filter:saturate(.85) contrast(1.04)}
 .skills{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .skills li{padding:9px 16px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:rgba(241,237,228,.03);
   transition:border-color .3s,color .3s}
@@ -237,3 +237,9 @@ a.card-more:hover{text-decoration:underline}
   .w>span,.fade-late,.reveal{transform:none!important;opacity:1!important}
   .hero-hint i{width:64px}
 }
+
+/* 3D portrait */
+.portrait{will-change:transform;transition:opacity 1.1s var(--ease)}
+.portrait.is-3d img{visibility:hidden}
+.portrait canvas{filter:saturate(.85) contrast(1.04)}
+.thumb-game img{object-position:62% 50%}
