@@ -120,8 +120,17 @@ img,svg{display:block;max-width:100%}
 .solar.touched .solar-hint{opacity:0}
 .solar.is-3d .solar-label:not([hidden]){display:block;position:absolute;left:0;top:0;pointer-events:none;padding:4px 10px;
   border-radius:999px;background:rgba(9,9,11,.75);border:1px solid rgba(230,211,168,.4);color:var(--accent);white-space:nowrap}
+/* Eventmate 3D logo */
+.work-3d.reveal.in:hover{transform:none}
+.em3d{touch-action:pan-y;background:radial-gradient(90% 90% at 40% 35%,#4f67a3 0%,#33467a 55%,#1f2b4f 100%)}
+.em3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:pointer}
+.em3d.is-3d .em-fallback{display:none}
+.em-hint,.em3d .em-ui{display:none}
+.em3d.is-3d .em-ui{display:flex;position:absolute;right:10px;bottom:10px}
+.em3d.is-3d .em-hint{display:block;position:absolute;left:12px;bottom:12px;margin:0;color:rgba(241,237,228,.75);pointer-events:none;transition:opacity .6s}
+.em3d.touched .em-hint{opacity:0}
 .card-more{text-decoration:none}
-.card-more:hover{text-decoration:underline}
+a.card-more:hover{text-decoration:underline}
 
 /* Portrait + skills */
 .portrait{margin:0;position:relative;border-radius:28px;overflow:hidden;max-width:440px;margin-inline:auto;

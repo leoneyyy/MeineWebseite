@@ -79,8 +79,14 @@
             <p class="muted">Ein interaktives 3D-Sonnensystem in JavaFX: Planeten auf ihren Bahnen, regelbare Simulationsgeschwindigkeit und Zoom auf einzelne Himmelskörper. Probier das Modell oben direkt aus.</p>
             <a class="mono card-more" href="https://github.com/leoneyyy/Sonnensystem" target="_blank" rel="noopener">Auf GitHub ansehen →</a>
           </article>
-          <article class="card work reveal">
-            <div class="thumb"><img src="assets/eventmate.jpg" alt="Eventmate-Logo: eine Hand hält einen Kalender mit Stern" loading="lazy" width="503" height="569"></div>
+          <article class="card work work-3d reveal">
+            <div class="thumb em3d" id="eventmate3d">
+              <img class="em-fallback" src="assets/eventmate.jpg" alt="Eventmate-Logo: eine Hand hält einen Kalender mit Stern" loading="lazy" width="503" height="569">
+              <p class="em-hint mono" aria-hidden="true">Tippen für Konfetti</p>
+              <div class="solar-ui em-ui">
+                <button type="button" class="mono" data-em="confetti" aria-label="Konfetti auslösen">✦</button>
+              </div>
+            </div>
             <p class="mono tag">Java · Android</p>
             <h3 class="card-title">Eventmate</h3>
             <p class="muted">Eine Android-App rund um Events: entdecken, planen und gemeinsam mit Freunden hingehen.</p>
@@ -159,5 +165,6 @@
   <script src="shader.js"></script>
   <script src="main.js"></script>
   <script type="module" src="solar.js"></script>
+  <script type="module" src="eventmate.js"></script>
 </body>
 </html>
