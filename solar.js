@@ -22,6 +22,8 @@ async function boot() {
   try {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
   } catch { return; } // keep the static image
+  // inline sizing so a stale stylesheet can never cause a resize feedback loop
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;display:block';
   host.prepend(canvas);
   host.classList.add('is-3d');
   let visible = true, raf = 0, last = performance.now(), simTime = 0, idleFrames = 0;
